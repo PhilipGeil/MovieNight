@@ -13,13 +13,16 @@ namespace MovieNight
         public int Year { get; set; }
         public string Description { get; set; }
         public List<string> Genres { get; set; }
-
-        public Movie(int id, string title, int year, string des) 
+        public Movie(string title, int year, string des)
         {
-            Id = id;
             Title = title;
             Year = year;
             Description = des;
+        }
+        public Movie(int id, string title, int year, string des) 
+            :this(title, year, des)
+        {
+            Id = id;
         }
     }
 }

@@ -12,11 +12,16 @@ namespace MovieNight
         public string FName { get; set; }
         public string LName { get; set; }
 
-        public Actor(int id, string fName, string lName) 
+
+        public Actor(string fName, string lName)
         {
-            Id = id;
             FName = fName;
             LName = lName;
+        }
+        public Actor(int id, string fName, string lName) 
+            :this(fName, lName)
+        {
+            Id = id;
         }
     }
 }
